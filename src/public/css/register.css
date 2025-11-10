@@ -1,0 +1,6 @@
+@import url("login.css");
+
+/* Optional: override specific titles */
+.form-card h2 {
+  color: #111827;
+}

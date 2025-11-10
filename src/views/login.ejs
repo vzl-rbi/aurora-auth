@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - ES6 Auth App</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include('../components/navbar.ejs') %>
+
+    <div class="form-container">
+      <div class="form-card">
+        <h2>Welcome Back</h2>
+        <% if (error) { %>
+        <div class="error"><%= error %></div>
+        <% } %>
+
+        <form action="/login" method="POST">
+          <div class="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="••••••••"
+              required
+              minlength="6"
+            />
+          </div>
+
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+
+        <div class="extra-links">
+          <p>Don't have an account? <a href="/register">Register here</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
